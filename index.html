@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Ligação com o a aba do css -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fonte Montserrat adicionada ao projeto -->
+
+    <link rel="icon" type="image/x-icon" href="imagens/icone.ico">
+    <!-- Uma maletinha adicionada como ícone do meu portfólio -->
+
+
+    <title>Meu Portfólio</title>
+  </head>
+  <body>
+    <!-- <header>
+      Aqui organizei os botões do menu dentro de <nav>, que tem tem como seu propósito semântico a navegação principal da página -->
+      <nav id="menu">
+        <ul id="barra-navegacao">
+          <li>
+            <!-- Aqui usei a ideia de links internos (segunda opção sugerida no trabalho), que são direcionados para as respectivas seções com ids únicos -->
+            <a href="#home">HOME</a>
+            <a href="#sobre-mim">SOBRE MIM</a>
+            <a href="#formacao">FORMAÇÃO</a>
+            <a href="#portfolio">PORTFÓLIO</a>
+            <a href="#contato">CONTATO</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Criei um container para o conteúdo principal, nele está localizado cada seção separadamente: Home, Sobre mim, Formação, Portfólio e Contato. -->
+
+    <main class="container">
+      <section id="home">
+        <div id="apresentacao">
+          <!-- Respeitei os valores semânticos e coloquei o título principal em h1, e subtítulo em h2 , h3 e h4. -->
+          <h1 class="titulo-principal">
+            MEU NOME É KAROLAINE <br />
+            <span class="destaque">PEREIRA... </span>
+          </h1>
+          <h3 class="subtitulo">
+            Estudante de Engenharia de Software na Uninter
+          </h3>
+        </div>
+
+        
+
+        <img
+          src="imagens/header.png"
+          alt="Imagem topo da página"
+          id="img-home"
+        />
+        
+      </section>
+
+      <section id="sobre-mim">
+        <div id="resumo">
+          <h4 class="mini-texto">Prazer em conhecer você...</h4>
+          <br />
+          <h2 class="titulo-principal">Sobre mim...</h2>
+
+          <p class="paragrafo">
+            Olá! Meu nome é Karolaine Pereira, moro em Niterói/Rio de Janeiro.
+          </p>
+          <p class="paragrafo">
+            Tenho paixão por tecnologia desde os meus 7 anos, adorava explorar o
+            Windows e resolver os problemas que eu mesma criava (por exemplo,
+            fazer limpezas no S.O após colocar malware no meu computador, pois
+            não sabia a forma segura para fazer downloads!).
+          </p>
+          <p class="paragrafo">
+            Atualmente, tenho 23 anos, comecei a praticar programação em 2023
+            com a linguagem C#. Estou praticando HTML, CSS e JS, mas a minha
+            paixão é Backend, dados e Cibersegurança. Estou sempre buscando
+            aprender e evoluir.
+          </p>
+          <p class="paragrafo">
+            Curiosidade sobre mim: adoro animais, e quando posso, ajudo gatinhos
+            em situação de rua!! Além disso, meus hobbies são: ler livros
+            góticos, assistir filmes de terror, k-dramas, fazer maquiagens
+            alternativas e comprar na Shein/Shopee (hahaha).
+          </p>
+          <br /><br />
+          <blockquote>
+            <span id="aspas">❝</span>“Escolha um trabalho que você ame, e não
+            terá que trabalhar um único dia na vida.” — Confúcio
+          </blockquote>
+        </div>
+
+        <div id="design">
+          <img id="design-foto" src="imagens/ComputerCat_06.gif" />
+        </div>
+      </section>
+
+      <section id="formacao">
+        <div class="bloco-formacao">
+          <h2 class="titulo-principal">Minha formação</h2>
+
+          <p class="paragrafo">
+            Ensino médio: COLÉGIO RUI BARBOSA 2017-2019
+            <br />
+            <span class="status">COMPLETO</span> 
+          </p><br>
+
+          <p class="paragrafo">
+            Ensino superior: BACHARELADO EM ENGENHARIA DE SOFTWARE<br />
+            CENTRO UNIVERSITÁRIO INTERNACIONAL UNINTER 2025-2029 <br />
+            <span class="status">ANDAMENTO</span>
+          </p> <br>
+
+          <p class="paragrafo">Idioma: Inglês <br>
+            Leitura: Intermediário <br>
+            Fala: Básico 
+        </div>
+
+        <div class="bloco-certificacao">
+          <h2 class="titulo-principal">Minhas certificações</h2>
+
+          <p class="paragrafo">
+            <span class="instituicao">Microlins</span><br />
+            Banco de Dados com SQL Server, Lógica de Programação, Programação C#
+            com Visual Studio Essencial, Intermediário e Avançado I e II,
+            Segurança na Era Digital.
+          </p>
+
+          <!-- Botões abaixo para abrir a imagem dos respectivos certificados 
+           target _blank para abrir o link em uma nova aba
+           noopener noreferrer para garantir segurança e privacidade ao abrir links externos-->
+
+          <a
+            class="button-detalhes"
+            href="https://github.com/karoupng/certificados-portfolio/blob/main/certificadoMicrolins.jpg?raw=true"
+            target="_blank" 
+            rel="noopener noreferrer" 
+          >
+            <button class="button-certificado">Ver meu certificado</button>
+          </a>
+
+          <p class="paragrafo">
+            <span class="instituicao">Microsoft</span><br />
+            Conceitos básicos de segurança, conformidade e identidade - SC900<br />
+            Conhecimento em segurança, conformidade, identidade e privacidade no
+            Microsoft Azure, com foco em proteção de informações e gestão de
+            riscos em ambientes de nuvem.
+          </p>
+
+          <a
+            class="button-detalhes"
+            href="https://learn.microsoft.com/api/credentials/share/pt-br/KarolainePereira-7135/DD4B1CE3EBB9A7BB?sharingId=F41638FDBD7C973A"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button class="button-certificado">Ver meu certificado</button>
+          </a>
+        </div>
+      </section>
+
+      <section id="portfolio">
+        <div id="titulo-portfolio">
+          <h2 class="titulo-principal">Meu Portfolio</h2>
+          <h3 class="subtitulo">Projetos desenvolvidos durante o curso:</h3>
+        </div>
+
+        <div id="container-projetos">
+          <div class="projetos">
+            <p>
+              <span id="materia-projeto"
+                >BANCO DE DADOS RELACIONAL - MODELO MER</span
+              >
+            </p>
+            <br /><br /><br />
+            <a
+              href="imagens/bancodedados.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="img-projeto"
+                src="imagens/bancodedados.jpg"
+                alt="Imagem do Modelo MER realizado"
+                title="Clique para melhor visualização"
+              />
+            </a> <br><br>
+            
+
+            <p class="resumo-projeto">Desenvolvi do zero o projeto de modelagem de banco de dados para uma rede de hotéis, seguindo uma análise de requisitos já existente. Utilizei o Canva para criar um design visual agradável e profissional dos diagramas. Estruturei entidades, atributos e relacionamentos conforme as necessidades do negócio, garantindo a integridade e organização das informações. Implementei o banco de dados no MySQL Workbench, aprimorando habilidades práticas de inserção, exclusão e atualização de cadastros, além de documentar detalhadamente as regras de negócio. O resultado foi um modelo eficiente, escalável e alinhado às necessidades do projeto, demonstrando domínio técnico adquirido durante o desenvolvimento na faculdade e preocupação com a experiência do usuário.</p>
+          </div>
+
+          <div class="projetos">
+            <p>
+              <span id="materia-projeto">
+                LÓGICA E PROGRAMAÇÃO DE ALGORÍTMOS - MENU DE CONSULTAR
+                FUNCIONÁRIOS
+              </span>
+            </p>
+
+            <!-- Abaixo o video do projeto de Lógica, autoplay pro vídeo ser reproduzido automaticamente
+              muted para que o som seja desativado
+              loop faz o vídeo reiniciar automaticamente assim que terminar
+              playsinline para ser responsivo em ambiente de reprodução móvel
+              controls para visualização de controles padrão do navegador, como play, pause..
+             -->
+
+            <video
+              src="videos/VideoLPA.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+              width="652px"
+              height="403px"
+            ></video>
+
+            <p class="resumo-projeto">Criei um programa funcional para gerenciamento de funcionários, que inclui cadastro, consultas e remoção de dados, estruturado em um menu interativo. Durante o desenvolvimento, apliquei conhecimentos sólidos em lógica de programação e algoritmos para organizar fluxos, condições e manipulação de dados de forma eficiente. Aprimorei habilidades práticas em Python, incluindo controle de entrada e saída, uso de estruturas de repetição e condicionais, e tratamento de dados em listas. Esse projeto reforçou minha capacidade de traduzir requisitos em código funcional, promovendo organização, clareza e usabilidade no desenvolvimento de soluções simples e eficazes.</p>
+          </div>
+        </div>
+
+        <section id="contato">
+          <h2 class="titulo-principal">Contato</h2>
+          <form>
+            <!-- Uso do form e fieldset que tem um valor semântico próprio para formulários, com suas respectivas caixas de texto que precisam ser preenchidas obrigatoriamente por conta do "required" -->
+            <fieldset>
+              <legend class="subtitulo">Entre em contato comigo abaixo:</legend>
+              <br />
+              <label for="nome">Nome:</label>
+              <input
+                type="text"
+                id="nome"
+                name="data[nome]"
+                placeholder="Digite seu nome"
+                required 
+              />
+              <br /><br />
+              <label for="email">E-mail:</label>
+              <input
+                type="text"
+                id="email"
+                name="data[email]"
+                placeholder="Digite seu e-mail"
+                required
+              />
+              <br /><br />
+              <label for="mensagem">Mensagem:</label>
+              <textarea
+                placeholder="Escreva sua mensagem aqui"
+                id="mensagem"
+                name="data[mensagem]"
+                rows="10"
+                cols="50"
+                required
+              ></textarea>
+              <br /><br />
+              <button type="submit" id="Enviar">Enviar</button>
+            </fieldset>
+          </form>
+        </section>
+      </section>
+      <!-- Rodapé do site -->
+      <footer>
+        <p>© 2025 Karolaine Pereira. Todos os direitos reservados.</p>
+        <p>Contato: karol-dev@hotmail.com</p>
+      </footer>
+    </main>
+
+    <!-- Ligação com o a aba do script -->
+    <script src="script.js"></script>
+  </body>
+</html>

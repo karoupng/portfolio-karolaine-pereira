@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Alterações no corpo do código, como: cor de fundo, fonte padrão e tamanho de fonte */
+  background-color: #100e24;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+}
+
+section {
+  border-radius: 20px;
+}
+
+.titulo-principal,
+.subtitulo,
+.paragrafo,
+label,
+.mini-texto,
+blockquote,
+footer {
+  /* Cor de fonte branca adicionada em grande parte do site */
+  color: white;
+}
+
+/* Ids únicos criados em diferentes divs para que seja mais fluida a estilização com css , como apresentacao, img-home, e cada seção do menu*/
+
+#apresentacao {
+  float: left;
+  margin-left: 150px;
+  margin-top: 3%;
+}
+#img-home {
+  width: 20%;
+}
+.destaque {
+  font-family: "Bebas Neue";
+  font-size: 70px;
+
+  letter-spacing: 10px;
+
+  color: transparent;
+  -webkit-text-stroke: 0.1px #9c256d; /* Contorno usado para a fonte principal do sobrenome "Pereira" em destaque*/
+}
+
+#formacao,
+#sobre-mim {
+  background: linear-gradient(135deg, #8f2367 0%, rgba(44, 3, 44, 0) 100%);
+}
+
+#sobre-mim {
+  text-align: start;
+}
+
+#materia-projeto {
+  color: white;
+}
+
+.container {
+  display: grid;
+  margin-left: 150px;
+}
+
+.titulo-principal {
+  font-size: 35px;
+}
+
+/* Estilização do menu lateral, posicionamento e pseudoclasses */
+#menu {
+  min-width: 150px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgb(14, 11, 28);
+}
+#menu a {
+  text-decoration: none;
+  display: block;
+  font-size: 30px;
+  color: white;
+}
+
+#menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#menu li {
+  margin-bottom: 24px;
+}
+
+#menu li a:hover {
+  color: #741e59;
+}
+
+#home {
+  /* Utilização de grid para facilitar o posicionamento das divs no site */
+  grid-column-start: 1;
+
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+#portfolio {
+  grid-column-start: 1;
+  text-align: center;
+}
+
+#formacao {
+  display: flex; /* Coloca os blocos dentro da seção formação lado a lado, apenas usando o flex */
+  gap: 100px;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.bloco-formacao,
+.bloco-certificacao,
+#resumo,
+#design {
+  /* Aqui foi usado uma cor de fundo gradiente entre um magenta/roxo uva, com um efeito gradiente pra dar um destaque */
+  background: linear-gradient(135deg, #8f2367 0%, rgba(44, 3, 44, 0) 100%);
+  border-radius: 12px;
+  box-shadow: 0 0 8px #0002;
+  padding: 30px 20px;
+  min-width: 320px;
+  max-width: 800px;
+  flex: 1;
+}
+
+#sobre-mim {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  padding: 30px 0;
+  grid-column-start: 1;
+  text-align: justify;
+  margin-bottom: 70px;
+}
+
+#design-foto {
+  width: 786px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 8px #0002;
+}
+
+#aspas {
+  font-size: 60px;
+}
+
+blockquote {
+  /* Aqui utilizei o blockquote que tem exatamente esse propósito, ser usado para citações e semelhantes */
+  background-color: #1b1a2d67;
+  border-radius: 12px;
+  border-color: rgb(14, 11, 28);
+
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Abaixo as estilizações feitas na seção "Contato" dentro do <form> */
+label,
+input,
+textarea,
+button {
+  /* Uso do display block para que os elementos fiquem empilhados, um abaixo do outro, no padrão do HTML */
+  display: block;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  font: inherit;
+  font-weight: 700;
+  padding: 1.25rem;
+}
+
+input,
+textarea {
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  outline: none;
+  border-color: #9c256d;
+  box-shadow: 0 0 0 3px #9c256c5c;
+}
+
+button {
+  border: none;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#Enviar:hover,
+#Enviar:focus {
+  outline: none;
+  background: #671647;
+}
+
+#Enviar {
+  background-color: #9c256d;
+  color: white;
+}
+
+.button-certificado,
+.button-detalhes {
+  width: 200px;
+  text-decoration: none;
+}
+
+.button-certificado:hover,
+.button-certificado:focus {
+  background: #b5b3b3d6;
+}
+
+fieldset {
+  margin: 0;
+  border-color: #8f2367;
+  border-radius: 12px;
+  width: 40%;
+  margin: auto;
+}
+
+#portfolio {
+  /* Portfolio definido como o elemento pai grid, e os demais divs dentro dele vão ser posicionados de acordo com as linhas */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+
+  justify-content: center;
+  padding: 30px 0;
+  text-align: center;
+  margin-bottom: 70px;
+}
+#titulo-portfolio {
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.projetos {
+  grid-row: 2;
+  background: linear-gradient(135deg, #8f2367 0%, rgba(44, 3, 44, 0) 100%);
+  border-radius: 12px;
+  box-shadow: 0 0 8px #0002;
+  padding: 30px 20px;
+  min-width: 320px;
+  max-width: 800px;
+  margin-bottom: 70px;
+}
+
+#container-projetos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  justify-content: center;
+}
+
+.resumo-projeto {
+  color: white;
+  text-align: justify;
+}
+
+#contato {
+  grid-row: 3;
+}
+
+.img-projeto {
+  width: 603px;
+  height: 307px;
+}
+
+/* Posicionamento do rodapé */
+footer {
+  display: flex;
+  justify-content: center;
+}

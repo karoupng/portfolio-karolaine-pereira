@@ -291,3 +291,80 @@ footer {
   display: flex;
   justify-content: center;
 }
+
+/* 
+   ESTILOS RESPONSIVOS (MOBILE)*/
+   
+@media (max-width: 768px) {
+  
+  
+  .container {
+    margin-left: 0;
+    padding: 15px;
+    display: block; 
+  }
+
+  /* Transforma o menu lateral em um menu no topo da tela */
+  #menu {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  /* Coloca os links do menu lado a lado no celular */
+  #menu li {
+    display: inline-block;
+    margin: 0 10px;
+    margin-bottom: 10px;
+  }
+  
+  #menu a {
+    font-size: 18px;
+  }
+
+  /* Centraliza a apresentação inicial e diminui a fonte de destaque */
+  #apresentacao {
+    float: none;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  .destaque {
+    font-size: 45px; 
+  }
+
+  #img-home {
+    width: 60%;
+    margin: 20px auto;
+    display: block;
+  }
+
+  
+  #sobre-mim,
+  #formacao {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Altera o Grid para ter apenas 1 coluna no celular */
+  #container-projetos {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Força todas as imagens e vídeos a caberem na tela do celular */
+  .img-projeto,
+  #design-foto,
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Expande o formulário para ocupar a tela quase toda */
+  fieldset {
+    width: 95%;
+  }
+}

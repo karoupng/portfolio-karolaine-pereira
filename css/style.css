@@ -384,7 +384,8 @@ footer {
 
   #img-home {
     width: 60%;
-  }
+    position: relative;
+    bottom: 100px;
 }
 
 /* --------- CELULAR (até 480px) --------- */

@@ -19,18 +19,17 @@
     <title>Meu Portfólio</title>
   </head>
   <body>
-   <header>
-      <!--Aqui organizei os botões do menu dentro de <nav>, que tem tem como seu propósito semântico a navegação principal da página -->
+    <header>
+      <!--Aqui organizei os botões do menu dentro de <nav>, que tem como seu propósito semântico a navegação principal da página -->
       <nav id="menu">
+        <!-- Cada link agora vive em seu próprio <li>: isso permite distribuir e espaçar os itens individualmente com Flexbox na etapa do CSS -->
         <ul id="barra-navegacao">
-          <li>
-            <!-- Aqui usei a ideia de links internos (segunda opção sugerida no trabalho), que são direcionados para as respectivas seções com ids únicos -->
-            <a href="#home">HOME</a>
-            <a href="#sobre-mim">SOBRE MIM</a>
-            <a href="#formacao">FORMAÇÃO</a>
-            <a href="#portfolio">PORTFÓLIO</a>
-            <a href="#contato">CONTATO</a>
-          </li>
+          <!-- Aqui usei a ideia de links internos (segunda opção sugerida no trabalho), que são direcionados para as respectivas seções com ids únicos -->
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#sobre-mim">SOBRE MIM</a></li>
+          <li><a href="#formacao">FORMAÇÃO</a></li>
+          <li><a href="#portfolio">PORTFÓLIO</a></li>
+          <li><a href="#contato">CONTATO</a></li>
         </ul>
       </nav>
     </header>
@@ -50,14 +49,14 @@
           </h3>
         </div>
 
-        
-
-        <img
-          src="imagens/header.png"
-          alt="Imagem topo da página"
-          id="img-home"
-        />
-        
+        <!-- Imagem agrupada em seu próprio container: junto com #apresentacao, forma as duas colunas (texto | imagem) para o Flexbox -->
+        <div class="home-imagem">
+          <img
+            src="imagens/header.png"
+            alt="Imagem topo da página"
+            id="img-home"
+          />
+        </div>
       </section>
 
       <section id="sobre-mim">
@@ -79,7 +78,7 @@
             com a linguagem C#. Agora em 2026 estou estudando o framework Angular, com recorrente uso de Node.Js, TypeScript, NPM, PowerShell, Saas (css), HTML e Javascript. Estou sempre buscando
             aprender e evoluir. Estou em busca da minha primeira oportunidade como Engenheira de Software.
           </p>
-          
+
           <br /><br />
           <blockquote>
             <span id="aspas">❝</span>“Escolha um trabalho que você ame, e não
@@ -88,70 +87,75 @@
         </div>
 
         <div id="design">
-          <img id="design-foto" src="imagens/ComputerCat_06.gif" />
+          <img id="design-foto" src="imagens/ComputerCat_06.gif" alt="Animação de um gato usando o computador" />
         </div>
       </section>
 
       <section id="formacao">
-        <div class="bloco-formacao">
-          <h2 class="titulo-principal">Minha formação</h2>
+        <!-- Container envolvendo os dois blocos para que se tornem colunas alinhadas via Flexbox ou Grid -->
+        <div class="container-formacao">
+          <div class="bloco-formacao">
+            <h2 class="titulo-principal">Minha formação</h2>
 
-          <p class="paragrafo">
-            Ensino médio: COLÉGIO RUI BARBOSA 2017-2019
-            <br />
-            <span class="status">COMPLETO</span> 
-          </p><br>
+            <p class="paragrafo">
+              Ensino médio: COLÉGIO RUI BARBOSA 2017-2019
+              <br />
+              <span class="status">COMPLETO</span>
+            </p><br>
 
-          <p class="paragrafo">
-            Ensino superior: BACHARELADO EM ENGENHARIA DE SOFTWARE<br />
-            CENTRO UNIVERSITÁRIO INTERNACIONAL UNINTER 2025-2029 <br />
-            <span class="status">ANDAMENTO</span>
-          </p> <br>
+            <p class="paragrafo">
+              Ensino superior: BACHARELADO EM ENGENHARIA DE SOFTWARE<br />
+              CENTRO UNIVERSITÁRIO INTERNACIONAL UNINTER 2025-2029 <br />
+              <span class="status">ANDAMENTO</span>
+            </p> <br>
 
-          <p class="paragrafo">Idioma: Inglês <br>
-            Leitura: Intermediário <br>
-            Fala: Básico 
-        </div>
+            <p class="paragrafo">
+              Idioma: Inglês <br>
+              Leitura: Intermediário <br>
+              Fala: Básico
+            </p>
+          </div>
 
-        <div class="bloco-certificacao">
-          <h2 class="titulo-principal">Minhas certificações</h2>
+          <div class="bloco-certificacao">
+            <h2 class="titulo-principal">Minhas certificações</h2>
 
-          <p class="paragrafo">
-            <span class="instituicao">Microlins</span><br />
-            Banco de Dados com SQL Server, Lógica de Programação, Programação C#
-            com Visual Studio Essencial, Intermediário e Avançado I e II,
-            Segurança na Era Digital.
-          </p>
+            <p class="paragrafo">
+              <span class="instituicao">Microlins</span><br />
+              Banco de Dados com SQL Server, Lógica de Programação, Programação C#
+              com Visual Studio Essencial, Intermediário e Avançado I e II,
+              Segurança na Era Digital.
+            </p>
 
-          <!-- Botões abaixo para abrir a imagem dos respectivos certificados 
-           target _blank para abrir o link em uma nova aba
-           noopener noreferrer para garantir segurança e privacidade ao abrir links externos-->
+            <!-- Botões abaixo para abrir a imagem dos respectivos certificados
+             target _blank para abrir o link em uma nova aba
+             noopener noreferrer para garantir segurança e privacidade ao abrir links externos-->
 
-          <a
-            class="button-detalhes"
-            href="https://github.com/karoupng/certificados-portfolio/blob/main/certificadoMicrolins.jpg?raw=true"
-            target="_blank" 
-            rel="noopener noreferrer" 
-          >
-            <button class="button-certificado">Ver meu certificado</button>
-          </a>
+            <a
+              class="button-detalhes"
+              href="https://github.com/karoupng/certificados-portfolio/blob/main/certificadoMicrolins.jpg?raw=true"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button class="button-certificado">Ver meu certificado</button>
+            </a>
 
-          <p class="paragrafo">
-            <span class="instituicao">Microsoft</span><br />
-            Conceitos básicos de segurança, conformidade e identidade - SC900<br />
-            Conhecimento em segurança, conformidade, identidade e privacidade no
-            Microsoft Azure, com foco em proteção de informações e gestão de
-            riscos em ambientes de nuvem.
-          </p>
+            <p class="paragrafo">
+              <span class="instituicao">Microsoft</span><br />
+              Conceitos básicos de segurança, conformidade e identidade - SC900<br />
+              Conhecimento em segurança, conformidade, identidade e privacidade no
+              Microsoft Azure, com foco em proteção de informações e gestão de
+              riscos em ambientes de nuvem.
+            </p>
 
-          <a
-            class="button-detalhes"
-            href="https://learn.microsoft.com/api/credentials/share/pt-br/KarolainePereira-7135/DD4B1CE3EBB9A7BB?sharingId=F41638FDBD7C973A"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button class="button-certificado">Ver meu certificado</button>
-          </a>
+            <a
+              class="button-detalhes"
+              href="https://learn.microsoft.com/api/credentials/share/pt-br/KarolainePereira-7135/DD4B1CE3EBB9A7BB?sharingId=F41638FDBD7C973A"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button class="button-certificado">Ver meu certificado</button>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -181,7 +185,7 @@
                 title="Clique para melhor visualização"
               />
             </a> <br><br>
-            
+
 
             <p class="resumo-projeto">Desenvolvi do zero o projeto de modelagem de banco de dados para uma rede de hotéis, seguindo uma análise de requisitos já existente. Utilizei o Canva para criar um design visual agradável e profissional dos diagramas. Estruturei entidades, atributos e relacionamentos conforme as necessidades do negócio, garantindo a integridade e organização das informações. Implementei o banco de dados no MySQL Workbench, aprimorando habilidades práticas de inserção, exclusão e atualização de cadastros, além de documentar detalhadamente as regras de negócio. O resultado foi um modelo eficiente, escalável e alinhado às necessidades do projeto, demonstrando domínio técnico adquirido durante o desenvolvimento na faculdade e preocupação com a experiência do usuário.</p>
           </div>
@@ -207,58 +211,60 @@
               loop
               playsinline
               controls
-              class="video-projeto"></video>>
+              class="video-projeto"></video>
 
             <p class="resumo-projeto">Criei um programa funcional para gerenciamento de funcionários, que inclui cadastro, consultas e remoção de dados, estruturado em um menu interativo. Durante o desenvolvimento, apliquei conhecimentos sólidos em lógica de programação e algoritmos para organizar fluxos, condições e manipulação de dados de forma eficiente. Aprimorei habilidades práticas em Python, incluindo controle de entrada e saída, uso de estruturas de repetição e condicionais, e tratamento de dados em listas. Esse projeto reforçou minha capacidade de traduzir requisitos em código funcional, promovendo organização, clareza e usabilidade no desenvolvimento de soluções simples e eficazes.</p>
           </div>
         </div>
-
-        <section id="contato">
-          <h2 class="titulo-principal">Contato</h2>
-          <form>
-            <!-- Uso do form e fieldset que tem um valor semântico próprio para formulários, com suas respectivas caixas de texto que precisam ser preenchidas obrigatoriamente por conta do "required" -->
-            <fieldset>
-              <legend class="subtitulo">Entre em contato comigo abaixo:</legend>
-              <br />
-              <label for="nome">Nome:</label>
-              <input
-                type="text"
-                id="nome"
-                name="data[nome]"
-                placeholder="Digite seu nome"
-                required 
-              />
-              <br /><br />
-              <label for="email">E-mail:</label>
-              <input
-                type="text"
-                id="email"
-                name="data[email]"
-                placeholder="Digite seu e-mail"
-                required
-              />
-              <br /><br />
-              <label for="mensagem">Mensagem:</label>
-              <textarea
-                placeholder="Escreva sua mensagem aqui"
-                id="mensagem"
-                name="data[mensagem]"
-                rows="10"
-                cols="50"
-                required
-              ></textarea>
-              <br /><br />
-              <button type="submit" id="Enviar">Enviar</button>
-            </fieldset>
-          </form>
-        </section>
       </section>
-      <!-- Rodapé do site -->
-      <footer>
-        <p>© 2025 Karolaine Pereira. Todos os direitos reservados.</p>
-        <p>Contato: karol-dev@hotmail.com</p>
-      </footer>
+
+      <!-- #contato agora é uma seção irmã (não mais aninhada dentro de #portfolio) -->
+      <section id="contato">
+        <h2 class="titulo-principal">Contato</h2>
+        <form>
+          <!-- Uso do form e fieldset que tem um valor semântico próprio para formulários, com suas respectivas caixas de texto que precisam ser preenchidas obrigatoriamente por conta do "required" -->
+          <fieldset>
+            <legend class="subtitulo">Entre em contato comigo abaixo:</legend>
+            <br />
+            <label for="nome">Nome:</label>
+            <input
+              type="text"
+              id="nome"
+              name="data[nome]"
+              placeholder="Digite seu nome"
+              required
+            />
+            <br /><br />
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="data[email]"
+              placeholder="Digite seu e-mail"
+              required
+            />
+            <br /><br />
+            <label for="mensagem">Mensagem:</label>
+            <textarea
+              placeholder="Escreva sua mensagem aqui"
+              id="mensagem"
+              name="data[mensagem]"
+              rows="10"
+              cols="50"
+              required
+            ></textarea>
+            <br /><br />
+            <button type="submit" id="Enviar">Enviar</button>
+          </fieldset>
+        </form>
+      </section>
     </main>
+
+    <!-- Rodapé do site: agora é irmão de <main>, posição semanticamente correta -->
+    <footer>
+      <p>© 2025 Karolaine Pereira. Todos os direitos reservados.</p>
+      <p>Contato: karol-dev@hotmail.com</p>
+    </footer>
 
     <!-- Ligação com o a aba do script -->
     <script src="script.js"></script>

@@ -23,7 +23,7 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 1rem;
-  /* Trava qualquer barra de rolagem horizontal acidental */
+  
   overflow-x: hidden;
 }
 
@@ -130,7 +130,7 @@ footer {
 }
 
 #img-home {
-  width: clamp(10rem, 22vw, 20rem); /* relativo no lugar de width:20% puro */
+  width: clamp(10rem, 22vw, 20rem); 
   margin: 0 auto;
 }
 
@@ -308,7 +308,7 @@ fieldset {
 .img-projeto {
   width: 100%;
   max-width: 37.6875rem; /* antes 603px fixo */
-  height: auto; /* remove altura fixa que distorcia a proporção */
+  height: auto; 
   margin: 0 auto;
 }
 
@@ -333,7 +333,7 @@ footer {
 /* --------- TABLET / TELAS MÉDIAS (até 1024px) --------- */
 @media (max-width: 1024px) {
   :root {
-    --sidebar: 7.5rem; /* sidebar mais enxuta para liberar espaço ao conteúdo */
+    --sidebar: 7.5rem;
   }
 
   #home {
@@ -343,7 +343,7 @@ footer {
 
 /* --------- TABLET PEQUENO / MOBILE (até 768px) --------- */
 @media (max-width: 768px) {
-  /* Conteúdo ocupa a largura toda: a sidebar deixa de empurrar o layout */
+ 
   .container,
   footer {
     margin-left: 0;
